@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo d 的时候提示ERROR Deployer not found: git</title>
+    <url>/post/d1580cf.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>在<code>hexo d</code>命令的时候提示：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo d</span><br><span class="line">INFO  Validating config</span><br><span class="line">ERROR Deployer not found: git</span><br></pre></td></tr></table></figure>
+
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>在hexo博客目录下输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p>再次<code>hexo d</code>就成功了。</p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>error</tag>
+        <tag>解决办法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo生成永久链接hexo-abbrlink</title>
     <url>/post/e457e721.html</url>
     <content><![CDATA[<h3 id="安装hexo-abbrlink插件"><a href="#安装hexo-abbrlink插件" class="headerlink" title="安装hexo-abbrlink插件"></a>安装hexo-abbrlink插件</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
@@ -17,23 +34,6 @@
       <tags>
         <tag>hexo</tag>
         <tag>优化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo d 的时候提示ERROR Deployer not found: git</title>
-    <url>/post/d1580cf.html</url>
-    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>在<code>hexo d</code>命令的时候提示：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo d</span><br><span class="line">INFO  Validating config</span><br><span class="line">ERROR Deployer not found: git</span><br></pre></td></tr></table></figure>
-
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>在hexo博客目录下输入以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-
-<p>再次<code>hexo d</code>就成功了。</p>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-        <tag>error</tag>
-        <tag>解决办法</tag>
       </tags>
   </entry>
   <entry>
