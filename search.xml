@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo d 的时候提示ERROR Deployer not found: git</title>
+    <url>/post/d1580cf.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>在<code>hexo d</code>命令的时候提示：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo d</span><br><span class="line">INFO  Validating config</span><br><span class="line">ERROR Deployer not found: git</span><br></pre></td></tr></table></figure>
+
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>在hexo博客目录下输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p>再次<code>hexo d</code>就成功了。</p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>error</tag>
+        <tag>解决办法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>markdown简单语法</title>
-    <url>/2020/10/15/markdown%E7%AE%80%E5%8D%95%E8%AF%AD%E6%B3%95/</url>
+    <url>/post/89a35a5d.html</url>
     <content><![CDATA[<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 标题1</span></span><br><span class="line"><span class="section">## 标题2</span></span><br><span class="line"><span class="section">### 标题3</span></span><br><span class="line"><span class="section">#### 标题4</span></span><br><span class="line"><span class="section">##### 标题5</span></span><br><span class="line"><span class="section">###### 标题6</span></span><br></pre></td></tr></table></figure>
 <h1 id="标题1"><a href="#标题1" class="headerlink" title="标题1"></a>标题1</h1><h2 id="标题2"><a href="#标题2" class="headerlink" title="标题2"></a>标题2</h2><h3 id="标题3"><a href="#标题3" class="headerlink" title="标题3"></a>标题3</h3><h4 id="标题4"><a href="#标题4" class="headerlink" title="标题4"></a>标题4</h4><h5 id="标题5"><a href="#标题5" class="headerlink" title="标题5"></a>标题5</h5><h6 id="标题6"><a href="#标题6" class="headerlink" title="标题6"></a>标题6</h6><h1 id="文字加粗"><a href="#文字加粗" class="headerlink" title="文字加粗"></a>文字加粗</h1><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="strong">**我被加粗显示了**</span>正常文字</span><br></pre></td></tr></table></figure>
 <p><strong>我被加粗显示了</strong>正常文字</p>
@@ -22,7 +39,7 @@
 <p><a href="https://www.baidu.com/">baidu</a></p>
 <h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">文本</span>](<span class="link">QQ截图20201015210631.png</span>)</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/10/15/markdown%E7%AE%80%E5%8D%95%E8%AF%AD%E6%B3%95/QQ%E6%88%AA%E5%9B%BE20201015210631.png" alt="文本"></p>
+<p><img src="/post/89a35a5d/QQ%E6%88%AA%E5%9B%BE20201015210631.png" alt="文本"></p>
 <h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> 无序列表项1</span><br><span class="line"><span class="bullet">-</span> 列表项2</span><br></pre></td></tr></table></figure>
 
 <ul>
@@ -67,6 +84,25 @@
       <tags>
         <tag>markdown</tag>
         <tag>语法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo生成永久链接hexo-abbrlink</title>
+    <url>/post/e457e721.html</url>
+    <content><![CDATA[<h3 id="安装hexo-abbrlink插件"><a href="#安装hexo-abbrlink插件" class="headerlink" title="安装hexo-abbrlink插件"></a>安装hexo-abbrlink插件</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改站点根目录配置文件“-config-yml”"><a href="#修改站点根目录配置文件“-config-yml”" class="headerlink" title="修改站点根目录配置文件“_config.yml”"></a>修改站点根目录配置文件“_config.yml”</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">permalink: post&#x2F;:abbrlink.html</span><br></pre></td></tr></table></figure>
+
+<p>在任意位置加上：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">abbrlink:</span><br><span class="line">  alg: crc32      #support crc16(default) and crc32</span><br><span class="line">  rep: hex        #support dec(default) and hex</span><br></pre></td></tr></table></figure>
+
+<h3 id="可能出现文章undefined的情况"><a href="#可能出现文章undefined的情况" class="headerlink" title="可能出现文章undefined的情况"></a>可能出现文章undefined的情况</h3><p>先<code>hexo clean</code>，再生成<code>hexo g</code></p>
+<p>如果还不行就打开那个不对的文章md文件，看下最上面<code>Front-matter</code>里的配置是不是有什么不对的(主要注意<code>:</code>和<code>-</code>后面空格)。</p>
+<p>修改正确 保存生成就ok了。</p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>优化</tag>
       </tags>
   </entry>
 </search>
