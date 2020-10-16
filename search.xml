@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo生成永久链接hexo-abbrlink</title>
+    <url>/post/e457e721.html</url>
+    <content><![CDATA[<h3 id="安装hexo-abbrlink插件"><a href="#安装hexo-abbrlink插件" class="headerlink" title="安装hexo-abbrlink插件"></a>安装hexo-abbrlink插件</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改站点根目录配置文件“-config-yml”"><a href="#修改站点根目录配置文件“-config-yml”" class="headerlink" title="修改站点根目录配置文件“_config.yml”"></a>修改站点根目录配置文件“_config.yml”</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">permalink: post&#x2F;:abbrlink.html</span><br></pre></td></tr></table></figure>
+
+<p>在任意位置加上：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">abbrlink:</span><br><span class="line">  alg: crc32      #support crc16(default) and crc32</span><br><span class="line">  rep: hex        #support dec(default) and hex</span><br></pre></td></tr></table></figure>
+
+<h3 id="可能出现文章undefined的情况"><a href="#可能出现文章undefined的情况" class="headerlink" title="可能出现文章undefined的情况"></a>可能出现文章undefined的情况</h3><p>先<code>hexo clean</code>，再生成<code>hexo g</code></p>
+<p>如果还不行就打开那个不对的文章md文件，看下最上面<code>Front-matter</code>里的配置是不是有什么不对的(主要注意<code>:</code>和<code>-</code>后面空格)。</p>
+<p>修改正确 保存生成就ok了。</p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>优化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo d 的时候提示ERROR Deployer not found: git</title>
     <url>/post/d1580cf.html</url>
     <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>在<code>hexo d</code>命令的时候提示：</p>
@@ -84,25 +103,6 @@
       <tags>
         <tag>markdown</tag>
         <tag>语法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo生成永久链接hexo-abbrlink</title>
-    <url>/post/e457e721.html</url>
-    <content><![CDATA[<h3 id="安装hexo-abbrlink插件"><a href="#安装hexo-abbrlink插件" class="headerlink" title="安装hexo-abbrlink插件"></a>安装hexo-abbrlink插件</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改站点根目录配置文件“-config-yml”"><a href="#修改站点根目录配置文件“-config-yml”" class="headerlink" title="修改站点根目录配置文件“_config.yml”"></a>修改站点根目录配置文件“_config.yml”</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">permalink: post&#x2F;:abbrlink.html</span><br></pre></td></tr></table></figure>
-
-<p>在任意位置加上：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">abbrlink:</span><br><span class="line">  alg: crc32      #support crc16(default) and crc32</span><br><span class="line">  rep: hex        #support dec(default) and hex</span><br></pre></td></tr></table></figure>
-
-<h3 id="可能出现文章undefined的情况"><a href="#可能出现文章undefined的情况" class="headerlink" title="可能出现文章undefined的情况"></a>可能出现文章undefined的情况</h3><p>先<code>hexo clean</code>，再生成<code>hexo g</code></p>
-<p>如果还不行就打开那个不对的文章md文件，看下最上面<code>Front-matter</code>里的配置是不是有什么不对的(主要注意<code>:</code>和<code>-</code>后面空格)。</p>
-<p>修改正确 保存生成就ok了。</p>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-        <tag>优化</tag>
       </tags>
   </entry>
 </search>

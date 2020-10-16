@@ -3,11 +3,11 @@
   <title>老马博客</title>
   
   
-  <link href="https://daheian.github.io/atom.xml" rel="self"/>
+  <link href="http://oldcode.cn/atom.xml" rel="self"/>
   
-  <link href="https://daheian.github.io/"/>
+  <link href="http://oldcode.cn/"/>
   <updated>2020-10-16T05:03:53.459Z</updated>
-  <id>https://daheian.github.io/</id>
+  <id>http://oldcode.cn/</id>
   
   <author>
     <name>老马</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>hexo生成永久链接hexo-abbrlink</title>
-    <link href="https://daheian.github.io/post/e457e721.html"/>
-    <id>https://daheian.github.io/post/e457e721.html</id>
+    <link href="http://oldcode.cn/post/e457e721.html"/>
+    <id>http://oldcode.cn/post/e457e721.html</id>
     <published>2020-10-16T04:50:49.000Z</published>
     <updated>2020-10-16T05:03:53.459Z</updated>
     
@@ -34,16 +34,16 @@
     
     
     
-    <category term="hexo" scheme="https://daheian.github.io/tags/hexo/"/>
+    <category term="hexo" scheme="http://oldcode.cn/tags/hexo/"/>
     
-    <category term="优化" scheme="https://daheian.github.io/tags/%E4%BC%98%E5%8C%96/"/>
+    <category term="优化" scheme="http://oldcode.cn/tags/%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
   <entry>
     <title>hexo d 的时候提示ERROR Deployer not found: git</title>
-    <link href="https://daheian.github.io/post/d1580cf.html"/>
-    <id>https://daheian.github.io/post/d1580cf.html</id>
+    <link href="http://oldcode.cn/post/d1580cf.html"/>
+    <id>http://oldcode.cn/post/d1580cf.html</id>
     <published>2020-10-16T03:48:40.000Z</published>
     <updated>2020-10-16T04:47:20.095Z</updated>
     
@@ -59,18 +59,18 @@
     
     
     
-    <category term="hexo" scheme="https://daheian.github.io/tags/hexo/"/>
+    <category term="hexo" scheme="http://oldcode.cn/tags/hexo/"/>
     
-    <category term="error" scheme="https://daheian.github.io/tags/error/"/>
+    <category term="error" scheme="http://oldcode.cn/tags/error/"/>
     
-    <category term="解决办法" scheme="https://daheian.github.io/tags/%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <category term="解决办法" scheme="http://oldcode.cn/tags/%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>markdown简单语法</title>
-    <link href="https://daheian.github.io/post/89a35a5d.html"/>
-    <id>https://daheian.github.io/post/89a35a5d.html</id>
+    <link href="http://oldcode.cn/post/89a35a5d.html"/>
+    <id>http://oldcode.cn/post/89a35a5d.html</id>
     <published>2020-10-15T12:47:11.000Z</published>
     <updated>2020-10-16T04:46:42.418Z</updated>
     
@@ -85,9 +85,9 @@
     
     
     
-    <category term="markdown" scheme="https://daheian.github.io/tags/markdown/"/>
+    <category term="markdown" scheme="http://oldcode.cn/tags/markdown/"/>
     
-    <category term="语法" scheme="https://daheian.github.io/tags/%E8%AF%AD%E6%B3%95/"/>
+    <category term="语法" scheme="http://oldcode.cn/tags/%E8%AF%AD%E6%B3%95/"/>
     
   </entry>
   
