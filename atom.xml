@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>老马博客</title>
+  <title>老码博客</title>
   
   
   <link href="http://oldcode.cn/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>http://oldcode.cn/</id>
   
   <author>
-    <name>老马</name>
+    <name>这个老马</name>
     
   </author>
   
