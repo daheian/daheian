@@ -139,4 +139,25 @@
         <tag>aardio</tag>
       </tags>
   </entry>
+  <entry>
+    <title>生成以管理员权限运行的exe</title>
+    <url>/post/ce99bb17.html</url>
+    <content><![CDATA[<p>发布的应用程序如果有敏感操作，如果不是右键应用程序“以管理员身份运行”很可能导致程序出错，那么如何让aardio生成的exe自动申请管理员权限运行呢，方法如下:</p>
+<h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>自定义Manifest文件：  </p>
+<p>首先生成一次EXE文件，可以看到工程目录下自动生成了默认的<code> /.build/Manifest.xml</code><br>可以用记事本打开编辑此文件后在最后一行<code>“&lt;/assembly&gt;”</code>之前添加如下代码保存再生成EXE即可。</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Identify the application security requirements. --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">trustInfo</span> <span class="attr">xmlns</span>=<span class="string">&quot;urn:schemas-microsoft-com:asm.v3&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">security</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">requestedPrivileges</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">requestedExecutionLevel</span> <span class="attr">level</span>=<span class="string">&quot;requireAdministrator&quot;</span> <span class="attr">uiAccess</span>=<span class="string">&quot;false&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">requestedPrivileges</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">security</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">trustInfo</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>aardio文件首行注释：</p>
+<p>普通aardio文件，如果首行注释为”<code>//RUNAS//</code>“，那么在aardio中点击【运行】运行该代码时将会请求系统管理权限。</p>
+<p>如果在工程的 main.aardio 启动文件首行添加 <code>//RUNAS//</code>，那么将会自动修改 “<code>\.build\default.Manifest.xml</code>“ 文件设置生成的EXE文件启动时需要管理权限。</p>
+<h3 id="附注"><a href="#附注" class="headerlink" title="附注"></a>附注</h3><p>aardio最新版本标准库已提供 <code>process.admin.isRunAs()</code> 用于判断进程是否以管理方式运行，下面是示例代码：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="built_in">console</span>;</span><br><span class="line"><span class="keyword">import</span> process.admin;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> isAdmin,isXp = process.admin.isRunAs()</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;是否Vista,WIN7,WIN8 管理员权限&quot;</span>,isAdmin)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;是否XP操作系统&quot;</span>,!!isXp)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>aardio</tag>
+      </tags>
+  </entry>
 </search>

@@ -6,7 +6,7 @@
   <link href="http://oldcode.cn/atom.xml" rel="self"/>
   
   <link href="http://oldcode.cn/"/>
-  <updated>2020-11-02T15:13:11.539Z</updated>
+  <updated>2020-11-20T11:40:30.931Z</updated>
   <id>http://oldcode.cn/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>生成以管理员权限运行的exe</title>
+    <link href="http://oldcode.cn/post/ce99bb17.html"/>
+    <id>http://oldcode.cn/post/ce99bb17.html</id>
+    <published>2020-11-20T11:27:37.000Z</published>
+    <updated>2020-11-20T11:40:30.931Z</updated>
+    
+    <content type="html"><![CDATA[<p>发布的应用程序如果有敏感操作，如果不是右键应用程序“以管理员身份运行”很可能导致程序出错，那么如何让aardio生成的exe自动申请管理员权限运行呢，方法如下:</p><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>自定义Manifest文件：  </p><p>首先生成一次EXE文件，可以看到工程目录下自动生成了默认的<code> /.build/Manifest.xml</code><br>可以用记事本打开编辑此文件后在最后一行<code>“&lt;/assembly&gt;”</code>之前添加如下代码保存再生成EXE即可。</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Identify the application security requirements. --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">trustInfo</span> <span class="attr">xmlns</span>=<span class="string">&quot;urn:schemas-microsoft-com:asm.v3&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">security</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">requestedPrivileges</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">requestedExecutionLevel</span> <span class="attr">level</span>=<span class="string">&quot;requireAdministrator&quot;</span> <span class="attr">uiAccess</span>=<span class="string">&quot;false&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">requestedPrivileges</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">security</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">trustInfo</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>aardio文件首行注释：</p><p>普通aardio文件，如果首行注释为”<code>//RUNAS//</code>“，那么在aardio中点击【运行】运行该代码时将会请求系统管理权限。</p><p>如果在工程的 main.aardio 启动文件首行添加 <code>//RUNAS//</code>，那么将会自动修改 “<code>\.build\default.Manifest.xml</code>“ 文件设置生成的EXE文件启动时需要管理权限。</p><h3 id="附注"><a href="#附注" class="headerlink" title="附注"></a>附注</h3><p>aardio最新版本标准库已提供 <code>process.admin.isRunAs()</code> 用于判断进程是否以管理方式运行，下面是示例代码：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="built_in">console</span>;</span><br><span class="line"><span class="keyword">import</span> process.admin;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> isAdmin,isXp = process.admin.isRunAs()</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;是否Vista,WIN7,WIN8 管理员权限&quot;</span>,isAdmin)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;是否XP操作系统&quot;</span>,!!isXp)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;发布的应用程序如果有敏感操作，如果不是右键应用程序“以管理员身份运行”很可能导致程序出错，那么如何让aardio生成的exe自动申请管理员权限运行呢，方法如下:&lt;/p&gt;
+&lt;h3 id=&quot;方法一&quot;&gt;&lt;a href=&quot;#方法一&quot; class=&quot;headerlink&quot; title</summary>
+      
+    
+    
+    
+    
+    <category term="aardio" scheme="http://oldcode.cn/tags/aardio/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hexo-abbrlink和hexo-asset-image同时使用时图片使用相对路径解决办法</title>
     <link href="http://oldcode.cn/post/122331be.html"/>
     <id>http://oldcode.cn/post/122331be.html</id>
     <published>2020-11-02T14:57:47.000Z</published>
-    <updated>2020-11-02T15:13:11.539Z</updated>
+    <updated>2020-11-02T15:13:55.292Z</updated>
     
     <content type="html"><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>hexo博客同时安装了hexo-abbrlink和hexo-asset-image插件，markdown语法相对路径的方式插入图片无法显示。</p><h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>打开hexo博客根目录下<code>\node_modules\hexo-asset-image\index.js</code>  </p><p>修改</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> endPos = link.length<span class="number">-1</span>;</span><br></pre></td></tr></table></figure><p>为</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> endPos = link.length<span class="number">-5</span>;</span><br></pre></td></tr></table></figure><p>如下图：  </p><p><img src="/post/122331be/QQ%E6%88%AA%E5%9B%BE20201102221937.png" alt="QQ截图20201102221937"></p><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>修改完成之后，绝对路径不能用了，只能使用相对路径markdown语法才能生成正确的图片路径。  </p><p>相对路径的目录间隔符必须使用<code>“/”</code>。  </p><p>如果设置了<code>_config.yml</code>里的<code>post_asset_folder</code>属性为<code>true</code>，并且使用Typora来写博客的话，可以设置一下偏好如下图。</p><p><img src="/post/122331be/image-20201102231226552.png" alt="image-20201102231226552"></p>]]></content>
     
